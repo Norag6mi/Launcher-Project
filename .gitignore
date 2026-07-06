@@ -134,3 +134,29 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Local Environment Configuration (CRITICAL SECURITY)
+**/Backend/.env
+.env
+.env.local
+
+# Docker Local Data
+**/Docker/mysql_data/
+mysql_data/
+
+# Python Cache & Virtual Environments
+**/__pycache__/
+**/.venv/
+**/venv/
+**/*.pyc
+
+# Local Test Databases
+**/*.db
+**/*.sqlite
+
+# Compiled App Binaries (Stop uploading heavy built apps)
+**/Launcher/dist/
+**/Launcher/out/
+**/*.exe
+**/*.dmg
+**/*.zip
