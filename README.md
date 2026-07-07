@@ -27,7 +27,7 @@ This project was developed as a Final Year Engineering Project while also servin
 
 ## Screenshots
 
-(Add screenshots here later)
+
 
 Example:
 
