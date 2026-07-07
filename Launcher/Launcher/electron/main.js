@@ -25,10 +25,19 @@ function createWindow()
                 preload:path.join(__dirname, "preload.cjs"),
                 contextIsolation:true,
                 nodeIntegration:false,
-                webSecurity: false // <--- CRITICAL FIX: Allows React to load local file:/// paths
+                webSecurity: false 
             }
         });
-    mainWindow.loadURL("http://localhost:5173");
+
+    // --- THE FIX: REMOVE THE NATIVE OS MENU BAR ---
+    mainWindow.setMenu(null);
+
+    // --- PRODUCTION VS DEVELOPMENT ROUTING ---
+    if (app.isPackaged) {
+        mainWindow.loadFile(path.join(__dirname, "../dist/index.html"));
+    } else {
+        mainWindow.loadURL("http://localhost:5173");
+    }
 }
 
 app.whenReady().then(()=>
@@ -169,7 +178,7 @@ ipcMain.handle("remove-installation", async(event, gameId)=>
 );
 
 
-// --- THE LOCAL ASSET CACHING ENGINE ---
+//  THE LOCAL ASSET CACHING ENGINE 
 const cachePath = path.join(app.getPath('userData'), 'asset_cache');
 if (!fs.existsSync(cachePath)) {
     fs.mkdirSync(cachePath, { recursive: true });

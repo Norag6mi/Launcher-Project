@@ -21,21 +21,20 @@ app.include_router(auth_routes.router)
 app.include_router(games.router)
 app.include_router(versions.router)
 
+# --- THE FIX: CORS UPDATE ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
+    allow_origins=["*"],  # The wildcard: allows requests from the desktop .exe
+    allow_credentials=False, # Must be False when using the "*" wildcard
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 Base.metadata.create_all(bind=engine)
 
 
 @app.get("/")
 def root():
-
     return {
         "message": "Game Launcher Backend Running"
     }
@@ -43,13 +42,10 @@ def root():
 
 @app.get("/health")
 def health():
-
     with engine.connect() as connection:
-
         connection.execute(
             text("SELECT 1")
         )
-
     return {
         "status": "database connected"
     }
