@@ -2,7 +2,9 @@
 
 A desktop game launcher built with Electron, React, FastAPI, and Unity that allows users to authenticate, install games, receive updates, and launch games through a modern desktop application.
 
-This project was developed as a Final Year Engineering Project while also serving as a portfolio project demonstrating full-stack desktop application development, backend API design, Docker containerization, and deployment practices.
+Backened built with fastapi, uvicorn, sqlalchemy, pymysql, passlib, bcrypt, python-dotenv, email-validator, python-jose, python-multipart
+
+This project demonstrates full-stack desktop application development, backend API design, Docker containerization, and deployment practices.
 
 ---
 
@@ -90,6 +92,7 @@ This greatly reduces backend bandwidth requirements.
 - SQLAlchemy
 - JWT Authentication
 - Pydantic
+- Bycript
 
 ### Database
 
@@ -112,8 +115,6 @@ This greatly reduces backend bandwidth requirements.
 ### Planned
 
 - Nginx
-- HTTPS
-- Oracle Cloud Deployment
 - GitHub Actions CI/CD
 
 ---
@@ -167,13 +168,14 @@ Project/
 ### Backend
 
 - User Management
+- Password Hashing
 - Game Metadata
 - Version Checking
 - Release Notes API
 
 ---
 
-## Installation
+## Project Setup
 
 ### Clone the Repository
 
@@ -211,6 +213,13 @@ http://localhost:8000
 
 ---
 
+## Installation
+
+- Download the latest version from github releases.
+- Run the installer (Allow administrator permissions).
+- Signup / Login (Due to low resource allocations , first time login / signup may take upto 1 minute).
+- Use the launcher to download, update, manage my applications.
+
 ## API Overview
 
 | Endpoint | Description |
@@ -235,26 +244,23 @@ http://localhost:8000
 - Persistent Installations
 - Dockerized Backend
 - MySQL Integration
+- Cloud Hosting
 
 ### In Progress
 
-- Production Deployment
+- Automated Production Deployment
 - Nginx Configuration
-- HTTPS
-- Oracle Cloud Hosting
 - GitHub Actions
 
 ---
 
 ## Future Improvements
 
-- Multiple Game Support
 - Delta Patch Downloads
 - Download Resume
 - User Profiles
 - Game Statistics
 - Cloud Save Support
-- Admin Dashboard
 
 ---
 
@@ -269,6 +275,7 @@ This project demonstrates practical experience with:
 - SQL Database Design
 - Authentication using JWT
 - IPC Communication in Electron
+- Password hashing using Bycrypt
 - Software Deployment
 - Version Management Systems
 
