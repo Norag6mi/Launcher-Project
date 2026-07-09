@@ -1,6 +1,6 @@
-# Lightweight Game Distribution and Patch Management Platform
+# Lightweight Application Distribution and Patch Management Platform
 
-A desktop game launcher built with Electron, React, FastAPI, and Unity that allows users to authenticate, install games, receive updates, and launch games through a modern desktop application.
+A desktop application launcher built with Electron, React, FastAPI, and Unity that allows users to authenticate, install games, receive updates, and launch games through a modern desktop application.
 
 Backened built with fastapi, uvicorn, sqlalchemy, pymysql, passlib, bcrypt, python-dotenv, email-validator, python-jose, python-multipart
 
@@ -135,8 +135,6 @@ Project/
 ├── Launcher/
 │   ├── electron/
 │   └── src/
-│
-└── UnityGame/
 ```
 
 ---
@@ -213,12 +211,14 @@ http://localhost:8000
 
 ---
 
-## Installation
+## Launcher Installation
 
 - Download the latest version from github releases.
 - Run the installer (Allow administrator permissions).
 - Signup / Login (Due to low resource allocations , first time login / signup may take upto 1 minute).
 - Use the launcher to download, update, manage my applications.
+
+---
 
 ## API Overview
 
