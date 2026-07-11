@@ -1,8 +1,8 @@
 # Lightweight Application Distribution and Patch Management Platform
 
-A desktop application launcher built with Electron, React, FastAPI, and Unity that allows users to authenticate, install games, receive updates, and launch games through a modern desktop application.
+A desktop application launcher built with Electron, React, JWT, and Unity that allows users to authenticate, install games, receive updates, and launch games through a modern desktop application.
 
-Backened built with fastapi, uvicorn, sqlalchemy, pymysql, passlib, bcrypt, python-dotenv, email-validator, python-jose, python-multipart
+Backened built with FastAPI, Uvicorn, SQLalchemy, Pymysql, Passlib, Bcrypt, Python-dotenv, Email-validator, Python-jose, Python-multipart
 
 This project demonstrates full-stack desktop application development, backend API design, Docker containerization, and deployment practices.
 
@@ -64,6 +64,7 @@ Example:
                         |
 
             GitHub Releases (Game Files)
+               Supabase (Game Media)
 ```
 
 Unlike many game launchers, the backend **does not serve large game files**.
@@ -98,14 +99,16 @@ This greatly reduces backend bandwidth requirements.
 
 - MySQL
 
+### Web Servers
+
+- Aiven
+- Render
+- Supabase
+
 ### Desktop
 
 - Electron IPC
 - electron-store
-
-### Game
-
-- Unity
 
 ### DevOps
 
@@ -178,7 +181,7 @@ Project/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/Launcher-Project.git
+git clone https://github.com/Norag6mi/Launcher-Project.git
 ```
 
 ### Backend
@@ -211,7 +214,7 @@ http://localhost:8000
 
 ---
 
-## Launcher Installation
+## Launcher Installation Guide
 
 - Download the latest version from github releases.
 - Run the installer (Allow administrator permissions).
@@ -283,4 +286,4 @@ This project demonstrates practical experience with:
 
 ## License
 
-This project is intended for educational and portfolio purposes.
+This project is intended for educational purposes.
